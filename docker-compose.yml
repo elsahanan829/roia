@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - DATABASE_HOST=database
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=strapi
+      - DATABASE_USERNAME=strapi
+      - DATABASE_PASSWORD=strapi
+      - DATABASE_SSL=false
+    volumes:
+      - .:/usr/src
+      - /usr/src/node_modules
+    ports:
+      - '1337:1337'
+    depends_on:
+      - database
+
+  database:
+    container_name: mysql
+    image: mysql:8
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: strapi
+      MYSQL_USER: strapi
+      MYSQL_PASSWORD: strapi
+      MYSQL_ROOT_PASSWORD: strapi
+    volumes:
+      - ./.tmp/data:/var/lib/mysql

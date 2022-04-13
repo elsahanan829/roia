@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "what_we_do_cards",
+  "info": {
+    "singularName": "what-we-do-card",
+    "pluralName": "what-we-do-cards",
+    "displayName": "what_we_do_card",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "overview": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

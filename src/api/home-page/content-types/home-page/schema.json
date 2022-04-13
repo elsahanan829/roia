@@ -1,0 +1,71 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home-Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mission_title": {
+      "type": "string"
+    },
+    "mission_subtitle": {
+      "type": "string"
+    },
+    "mission_description1": {
+      "type": "text"
+    },
+    "mission_description2": {
+      "type": "text"
+    },
+    "mission_images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "what_we_do_subtitle": {
+      "type": "string"
+    },
+    "what_we_do_title": {
+      "type": "string"
+    },
+    "resources_subtitle": {
+      "type": "string"
+    },
+    "resources_title": {
+      "type": "string"
+    },
+    "projects_title": {
+      "type": "string"
+    },
+    "hero_title": {
+      "type": "string"
+    },
+    "hero_description": {
+      "type": "text"
+    },
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
